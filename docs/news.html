@@ -3,36 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>News | ElliotAlderson</title>
+  <title>All Cybersecurity News</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>ElliotAlderson</h1>
+    <h1>CyberSec News</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
+      <a href="news.html">All News</a>
     </nav>
   </header>
 
   <main>
-    <h2>Latest Cybersecurity News</h2>
-    <article>
-      <h3>Ransomware Attack Targets Global Finance</h3>
-      <p>Major financial institutions have been hit by a global ransomware attack. Stay safe and update your systems.</p>
-      <small>Jan 1, 2025</small>
-    </article>
-    <article>
-      <h3>New OSINT Tools Released for Ethical Investigators</h3>
-      <p>Check out the latest tools to ethically gather information for cybersecurity research.</p>
-      <small>Feb 15, 2025</small>
-    </article>
+    <h2>All News</h2>
+    <div id="news-container"></div>
   </main>
 
   <footer>
-    <p>&copy; 2025 ElliotAlderson | All Rights Reserved</p>
+    &copy; 2025 CyberSec News
   </footer>
+
+  <script>
+    fetch('news.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('news-container');
+        data.forEach(item => {
+          const article = document.createElement('article');
+          article.innerHTML = `
+            <h3>${item.title}</h3>
+            <small>${item.date}</small>
+            <p>${item.content}</p>
+          `;
+          container.appendChild(article);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
 </body>
 </html>
