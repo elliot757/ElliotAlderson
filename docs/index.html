@@ -1,3 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cybersecurity News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<main>
+  <h2>Latest Cybersecurity News</h2>
+  <div id="news-container"></div>
+</main>
+
+<script>
+  fetch('news.json')
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('news-container');
+      data.forEach(item => {
+        const article = document.createElement('article');
+        article.innerHTML = `
+          <h3>${item.title}</h3>
+          <small>${item.date}</small>
+          <p>${item.content}</p>
+        `;
+        container.appendChild(article);
+      });
+    })
+    .catch(err => console.error(err));
+</script>
+
+</body>
+</html>
 <script>
   fetch('news.json')
     .then(res => res.json())
