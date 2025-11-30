@@ -3,35 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ellion Alderson Cyber News</title>
+  <title>Cybersecurity News</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <main>
   <h2>Latest Cybersecurity News</h2>
   <div id="news-container"></div>
 </main>
 
 <script>
-  fetch('news.json')
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('news-container');
-      data.forEach(item => {
-        const article = document.createElement('article');
-        article.innerHTML = `
-          ${item.image ? `<img src="${item.image}" alt="${item.title}" style="width:100%; border-radius:8px; margin-bottom:1rem;">` : ''}
-          <h3>${item.title}</h3>
-          <small>${item.date}</small>
-          <p>${item.content}</p>
-        `;
-        container.appendChild(article);
-      });
-    })
-    .catch(err => console.error(err));
+fetch('news.json')
+  .then(res => res.json())
+  .then(data => {
+    const container = document.getElementById('news-container');
+    data.forEach(item => {
+      const article = document.createElement('article');
+      article.innerHTML = `
+        <h3><a href="news.html?id=${item.id}">${item.title}</a></h3>
+        <small>${item.date}</small>
+        <p>${item.excerpt}</p>
+      `;
+      container.appendChild(article);
+    });
+  })
+  .catch(err => console.error(err));
 </script>
-
-
 </body>
 </html>
