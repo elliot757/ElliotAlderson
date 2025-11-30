@@ -3,56 +3,31 @@ body {
   font-family: 'Segoe UI', sans-serif;
   background-color: #0f111a;
   color: #cfd8dc;
-  display: flex;
 }
 
 main {
-  max-width: 800px;
-  padding: 2rem;
-  flex-grow: 1;
-}
-
-aside {
-  width: 200px;
-  background-color: #111625;
+  max-width: 900px;
+  margin: 0 auto;
   padding: 2rem;
   box-sizing: border-box;
-  position: fixed;
-  right: 0;
-  top: 0;
-  height: 100vh;
-}
-
-aside h2 {
-  color: #00ff99;
-  margin-top: 0;
-}
-
-aside nav a {
-  display: block;
-  color: #cfd8dc;
-  text-decoration: none;
-  margin-bottom: 1rem;
-  font-weight: bold;
-}
-
-aside nav a:hover {
-  color: #00ff99;
 }
 
 h2 {
   color: #00ff99;
+  text-align: center;
+  margin-bottom: 2rem;
 }
 
 article {
   background-color: #1a1f2e;
-  padding: 1rem;
+  padding: 1.5rem;
   border-radius: 8px;
   margin-bottom: 2rem;
 }
 
 article h3 {
   color: #00ff99;
+  margin-top: 0;
 }
 
 small {
