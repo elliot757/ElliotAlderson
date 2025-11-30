@@ -3,34 +3,43 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ElliotAlderson | Cyber Security</title>
+  <title>Cybersecurity News</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>ElliotAlderson</h1>
+    <h1>CyberSec News</h1>
     <nav>
       <a href="index.html">Home</a>
-      <a href="services.html">Services</a>
-      <a href="news.html">News</a>
-      <a href="contact.html">Contact</a>
+      <a href="news.html">All News</a>
     </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <h2>Ethical OSINT & Cyber Security Services</h2>
-      <p>Providing ethical hacking, cybercrime investigation, and latest cybersecurity news.</p>
-    </section>
-
-    <section class="intro">
-      <h3>Our Mission</h3>
-      <p>We help individuals and organizations stay safe online by offering ethical cyber services and the latest news.</p>
-    </section>
+    <h2>Latest News</h2>
+    <div id="news-container"></div>
   </main>
 
   <footer>
-    <p>&copy; 2025 ElliotAlderson | All Rights Reserved</p>
+    &copy; 2025 CyberSec News
   </footer>
+
+  <script>
+    fetch('news.json')
+      .then(res => res.json())
+      .then(data => {
+        const container = document.getElementById('news-container');
+        data.slice(0, 3).forEach(item => {
+          const article = document.createElement('article');
+          article.innerHTML = `
+            <h3>${item.title}</h3>
+            <small>${item.date}</small>
+            <p>${item.content}</p>
+          `;
+          container.appendChild(article);
+        });
+      })
+      .catch(err => console.error(err));
+  </script>
 </body>
 </html>
