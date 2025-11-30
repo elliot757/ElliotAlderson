@@ -1,14 +1,18 @@
 [
   {
-    "title": "ShadowV2 Malware Campaign Exploits IoT Devices",
+    "id": "1",
+    "title": "ShadowV2 Malware Campaign Exploits IoT Devices to Build Botnet",
     "date": "2025-11-30",
-    "content": "Researchers have uncovered a sophisticated malware campaign called ShadowV2 targeting IoT devices...",
+    "excerpt": "Researchers discovered the ShadowV2 malware targeting IoT devices, building a massive botnet...",
+    "content": "Security researchers have uncovered the ShadowV2 malware campaign, which specifically targets Internet-of-Things (IoT) devices, including routers, NAS, and IP cameras. The malware exploits default credentials and outdated firmware to compromise devices, recruiting them into a rapidly growing botnet. ShadowV2 uses a modular payload system that allows attackers to deploy new functions remotely without re-infecting devices. The botnet has already been observed launching distributed denial-of-service (DDoS) attacks against multiple cloud service providers, causing intermittent outages. Users are advised to update all IoT devices, change default passwords, and segment IoT networks to minimize exposure.",
     "image": "https://example.com/shadowv2-iot.jpg"
   },
   {
-    "title": "Ransomware Group 'Akira' Expands Attacks",
+    "id": "2",
+    "title": "Ransomware Gang 'Akira' Targets Critical Infrastructure",
     "date": "2025-11-28",
-    "content": "The ransomware gang known as 'Akira' has expanded attacks to critical infrastructure...",
+    "excerpt": "Akira ransomware gang has expanded attacks to utilities, healthcare, and financial sectors...",
+    "content": "The ransomware group Akira has expanded attacks to critical infrastructure sectors such as utilities, healthcare, and financial institutions. Using compromised VPN and SSH credentials, the attackers infiltrate virtualized environments like VMware ESXi and Nutanix AHV. Once inside, they exfiltrate sensitive data, disable backup systems, and deploy ransomware rapidly. Security advisories recommend auditing virtual infrastructure, implementing strict access control, maintaining offline backups, and monitoring for unusual activity to prevent operational disruption and data loss.",
     "image": "https://example.com/akira-ransomware.jpg"
   }
 ]
