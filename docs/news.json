@@ -1,5 +1,15 @@
-{
-  "title": "ShadowV2 Malware Campaign Exploits IoT Devices to Launch Massive DDoS Attacks",
-  "date": "2025-11-30",
-  "content": "Security researchers have discovered a new malware campaign named 'ShadowV2' targeting Internet-of-Things (IoT) devices such as routers, network-attached storage (NAS) systems, and IP cameras. The malware exploits outdated firmware and default credentials to compromise devices and recruit them into a botnet. Unlike traditional malware, ShadowV2 employs a modular payload system, allowing attackers to remotely deploy new attack modules without re-infecting devices. This botnet has already been observed launching distributed denial-of-service (DDoS) attacks against several cloud service providers, causing intermittent outages in multiple regions. Experts emphasize the importance of patching all IoT devices, changing default passwords, and segmenting IoT networks to prevent compromise."
-}
+[
+  {
+    "title": "ShadowV2 Malware Campaign Exploits IoT Devices to Build Massive Botnet",
+    "date": "2025-11-30",
+    "content": "Researchers have uncovered a sophisticated malware campaign called ShadowV2, which specifically targets Internet-of-Things (IoT) devices including routers, network-attached storage devices (NAS), and IP cameras. The malware exploits outdated firmware and default credentials to infiltrate devices and recruit them into a rapidly growing botnet. ShadowV2 uses a modular architecture, allowing attackers to deploy new attack payloads remotely without needing to re-infect devices. The botnet has already launched distributed denial-of-service (DDoS) attacks against multiple cloud service providers, causing widespread outages across regions. Experts warn that unsecured IoT devices are a major risk vector, advising users to update firmware, change default passwords, disable remote management where possible, and segment IoT networks to contain potential compromises."
+  },
+  {
+    "title": "Ransomware Group 'Akira' Expands Attacks to Critical Infrastructure and Virtual Environments",
+    "date": "2025-11-28",
+    "content": "The ransomware gang known as 'Akira' has expanded its operations to target critical infrastructure sectors, including utilities, healthcare facilities, and financial institutions. Attackers exploit misconfigured VPN and SSH access to infiltrate virtualized environments such as VMware ESXi and Nutanix AHV, bypassing traditional security controls. Once inside, Akira operators exfiltrate sensitive data, disable backup systems, and deploy encryption tools, leaving organizations with severe operational disruption. Security advisories recommend that organizations conduct thorough audits of virtual infrastructure, implement strict access controls, maintain up-to-date backups stored offline, and monitor for anomalous behavior within virtualized systems. Failure to take proactive measures could result in costly downtime and data breaches."
+  },
+  {
+    "title": "Holiday Season Cybercrime Surge: 18,000 Fake Shopping Sites Target Consumers",
+    "date": "2025-11-27",
+    "content": "Cybersecurity analysts have reported a surge in fraudulent e-commerce websites exploiting the holiday shopping season, including Black Friday promotions. More than 18,000 fake websites have been detected, mimicking legitimate online retailers to steal personal credentials and payment information. Attackers use phishing emails, malicious advertisements, and cloned e-commerce sites to lure unsuspecting users. These scams often include fake reviews and limited-time offers to pressure consumers into acting quickly. Experts advise consumers to verify domain names carefully, enable multi-factor authentication on accounts, avoid clicking on suspicious links, and use secure payment methods. Enterprises are encouraged to enhance email filtering, deploy anti-phishing technologies, and actively monitor for
