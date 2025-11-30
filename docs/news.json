@@ -1,12 +1,5 @@
-[
-  {
-    "title": "Ransomware Attack Targets Global Finance",
-    "date": "2025-11-30",
-    "content": "Major financial institutions have been hit by a global ransomware attack. Stay safe and update your systems."
-  },
-  {
-    "title": "New OSINT Tools Released for Ethical Investigators",
-    "date": "2025-11-29",
-    "content": "Check out the latest tools to ethically gather information for cybersecurity research."
-  }
-]
+{
+  "title": "ShadowV2 Malware Campaign Exploits IoT Devices to Launch Massive DDoS Attacks",
+  "date": "2025-11-30",
+  "content": "Security researchers have discovered a new malware campaign named 'ShadowV2' targeting Internet-of-Things (IoT) devices such as routers, network-attached storage (NAS) systems, and IP cameras. The malware exploits outdated firmware and default credentials to compromise devices and recruit them into a botnet. Unlike traditional malware, ShadowV2 employs a modular payload system, allowing attackers to remotely deploy new attack modules without re-infecting devices. This botnet has already been observed launching distributed denial-of-service (DDoS) attacks against several cloud service providers, causing intermittent outages in multiple regions. Experts emphasize the importance of patching all IoT devices, changing default passwords, and segmenting IoT networks to prevent compromise."
+}
