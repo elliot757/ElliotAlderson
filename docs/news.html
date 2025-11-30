@@ -3,43 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>All Cybersecurity News</title>
+  <title>Full News</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>CyberSec News</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="news.html">All News</a>
-    </nav>
-  </header>
+<main>
+  <div id="full-news"></div>
+  <p><a href="index.html">← Back to News</a></p>
+</main>
 
-  <main>
-    <h2>All News</h2>
-    <div id="news-container"></div>
-  </main>
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get('id');
 
-  <footer>
-    &copy; 2025 CyberSec News
-  </footer>
+fetch('news.json')
+  .then(res => res.json())
+  .then(data => {
+    const newsItem = data.find(n => n.id === id);
+    if (!newsItem) {
+      document.getElementById('full-news').innerHTML = '<p>News not found.</p>';
+      return;
+    }
 
-  <script>
-    fetch('news.json')
-      .then(res => res.json())
-      .then(data => {
-        const container = document.getElementById('news-container');
-        data.forEach(item => {
-          const article = document.createElement('article');
-          article.innerHTML = `
-            <h3>${item.title}</h3>
-            <small>${item.date}</small>
-            <p>${item.content}</p>
-          `;
-          container.appendChild(article);
-        });
-      })
-      .catch(err => console.error(err));
-  </script>
+    const container = document.getElementById('full-news');
+    container.innerHTML = `
+      <h2>${newsItem.title}</h2>
+      <small>${newsItem.date}</small>
+      ${newsItem.image ? `<img src="${newsItem.image}" alt="${newsItem.title}" style="width:100%; margin:1rem 0;">` : ''}
+      <p>${newsItem.content}</p>
+    `;
+  })
+  .catch(err => console.error(err));
+</script>
 </body>
 </html>
